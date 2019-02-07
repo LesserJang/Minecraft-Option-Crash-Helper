@@ -2,6 +2,7 @@ package com.jih10157.MCOCH;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
@@ -55,17 +56,11 @@ class SelectFrame extends JFrame{
                 JOptionPane.showMessageDialog(this, "해결되었습니다.", "Info", JOptionPane.INFORMATION_MESSAGE);
             }
         });
-        blog.addMouseListener(new MouseListener() {
+        blog.addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) { openBlog(); }
-            @Override
-            public void mousePressed(MouseEvent e) { }
-            @Override
-            public void mouseReleased(MouseEvent e) { }
-            @Override
-            public void mouseEntered(MouseEvent e) { }
-            @Override
-            public void mouseExited(MouseEvent e) { }
+            public void mouseClicked(MouseEvent e) {
+                openBlog();
+            }
         });
         path.setBounds(5, 105, 50, 30);
         pathText.setBounds(0, 130, 340, 20);
