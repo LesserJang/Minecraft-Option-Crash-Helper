@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        if(args==null) new SelectFrame();
+        if(args.length==0) new SelectFrame();
         else {
             boolean b = false;
             try { b = Boolean.valueOf(args[1]);
